@@ -1,0 +1,22 @@
+# Ignore compiled Python files
+*.pyc
+
+# Ignore IDE files
+.vscode/
+.idea/
+
+# Ignore logs
+*.log
+
+# Ignore database files
+*.db
+
+# Ignore sensitive information
+secrets.ini
+.streamlit/
+data/morningstar/*
+
+# Ignore package files
+*.egg-info/
+dist/
+build/
