@@ -54,12 +54,16 @@ def requirements(dic_file, progress, drive):
 
 def login(mail):
     
-    chrome_options = Options()
-    chrome_options.add_argument('--no-sandbox')
-    chrome_options.add_argument('--ignore-certificate-errors')
-    # chrome_options.add_argument('--headless')
-    # chrome_options.add_argument('--disable-dev-shm-usage')
-    driver = webdriver.Chrome(options=chrome_options)
+    options = Options()
+    options.add_argument("--headless")
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--disable-features=NetworkService")
+    options.add_argument("--window-size=1920x1080")
+    options.add_argument("--disable-features=VizDisplayCompositor")
+    options.add_argument('--ignore-certificate-errors')
+    driver = webdriver.Chrome(options=options)
     url = "https://doc.morningstar.com/Fund.aspx?u=ALL#"
     driver.get(url)
     
@@ -165,6 +169,7 @@ def scrap(mail, dic_file, progress, drive):
                 if (("KID" in tr.text) or ("PRIIP" in tr.text)) and ("Français" in tr.text):
                     # print(tr.find_element(By.XPATH, 'td[5]/a[2]').get_attribute("href"))
                     link = tr.find_element(By.XPATH, 'td[5]/a[2]').get_attribute("href")
+                    print(link)
                     # response = requests.get(link)
                     # if response.status_code == 200:
                     #     with open(f"../data/other/{isin}.pdf", 'wb') as f:
