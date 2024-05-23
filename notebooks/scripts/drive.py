@@ -58,6 +58,7 @@ def update_file(drive, file, new_file):
             "type": "anyone",
         }
     ).execute()
+    print(f'File updated : {updated_file.get("name")}')
     return updated_file
 
 def create_file(drive, isin, new_file):
@@ -74,6 +75,7 @@ def create_file(drive, isin, new_file):
             "type": "anyone",
         }
     ).execute()
+    print(f'File created : {file.get("name")}')
     return file
 
 
