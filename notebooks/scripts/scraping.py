@@ -59,7 +59,7 @@ def login(mail):
     chrome_options.add_argument('--ignore-certificate-errors')
     chrome_options.add_argument('--headless')
     chrome_options.add_argument('--disable-dev-shm-usage')
-    driver = webdriver.Chrome(executable_path='/driver/chromedriver', options=chrome_options)
+    driver = webdriver.Chrome(options=chrome_options)
     url = "https://doc.morningstar.com/Fund.aspx?u=ALL#"
     driver.get(url)
     
