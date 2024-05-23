@@ -1,0 +1,72 @@
+FONDS EURO : Not Found
+FR0013202108 : Not Found
+FR0013305729 : Not Found
+FONDS EURO : No pdf
+FR0013202108 : No pdf
+FR0013305729 : No pdf
+FONDS EURO : Not Found
+FONDS EURO : No pdf
+AT0000A0SE25 : https://doc.morningstar.com/Document/1eacc012b8ad869327f0286342927d12.msdoc/
+AT0000A1TB59 : https://doc.morningstar.com/Document/e9017166cc99c0c0f80e45d8594f3b73.msdoc/
+BE0003470755 : Not Found
+BE0003470755 : No pdf
+AT0000A0SE25 : https://doc.morningstar.com/Document/1eacc012b8ad869327f0286342927d12.msdoc/
+AT0000A1TB59 : https://doc.morningstar.com/Document/e9017166cc99c0c0f80e45d8594f3b73.msdoc/
+BE0003470755 : Not Found
+BE0003470755 : No pdf
+AT0000A0SE25 : https://doc.morningstar.com/Document/1eacc012b8ad869327f0286342927d12.msdoc/
+AT0000A1TB59 : https://doc.morningstar.com/Document/e9017166cc99c0c0f80e45d8594f3b73.msdoc/
+BE0003470755 : Not Found
+BE0003470755 : No pdf
+AT0000A0SE25 : https://doc.morningstar.com/Document/1eacc012b8ad869327f0286342927d12.msdoc/
+AT0000A1TB59 : https://doc.morningstar.com/Document/e9017166cc99c0c0f80e45d8594f3b73.msdoc/
+BE0003470755 : Not Found
+BE0003470755 : No pdf
+AT0000A0SE25 : https://doc.morningstar.com/Document/1eacc012b8ad869327f0286342927d12.msdoc/
+AT0000A1TB59 : https://doc.morningstar.com/Document/e9017166cc99c0c0f80e45d8594f3b73.msdoc/
+BE0003470755 : Not Found
+BE0003470755 : No pdf
+AT0000A0SE25 : https://doc.morningstar.com/Document/1eacc012b8ad869327f0286342927d12.msdoc/
+AT0000A1TB59 : https://doc.morningstar.com/Document/e9017166cc99c0c0f80e45d8594f3b73.msdoc/
+BE0003470755 : Not Found
+BE0003470755 : No pdf
+AT0000A0SE25 : https://doc.morningstar.com/Document/1eacc012b8ad869327f0286342927d12.msdoc/
+AT0000A1TB59 : https://doc.morningstar.com/Document/e9017166cc99c0c0f80e45d8594f3b73.msdoc/
+BE0003470755 : Not Found
+BE0057451271 : https://doc.morningstar.com/Document/8a2d4b9507d523cd27f59051967a5ed4.msdoc/
+BE0003470755 : No pdf
+AT0000A0SE25 : https://doc.morningstar.com/Document/1eacc012b8ad869327f0286342927d12.msdoc/
+AT0000A1TB59 : https://doc.morningstar.com/Document/e9017166cc99c0c0f80e45d8594f3b73.msdoc/
+BE0057451271 : https://doc.morningstar.com/Document/8a2d4b9507d523cd27f59051967a5ed4.msdoc/
+BE0058182792 : https://doc.morningstar.com/Document/193523895a3184e0b7712b33ca6bc634.msdoc/
+AT0000A0SE25 : https://doc.morningstar.com/Document/1eacc012b8ad869327f0286342927d12.msdoc/
+AT0000A1TB59 : https://doc.morningstar.com/Document/e9017166cc99c0c0f80e45d8594f3b73.msdoc/
+BE0057451271 : https://doc.morningstar.com/Document/8a2d4b9507d523cd27f59051967a5ed4.msdoc/
+BE0058182792 : https://doc.morningstar.com/Document/193523895a3184e0b7712b33ca6bc634.msdoc/
+AT0000A0SE25 : https://doc.morningstar.com/Document/1eacc012b8ad869327f0286342927d12.msdoc/
+AT0000A0SE25 : https://doc.morningstar.com/Document/1eacc012b8ad869327f0286342927d12.msdoc/
+AT0000A0SE25 : https://doc.morningstar.com/Document/1eacc012b8ad869327f0286342927d12.msdoc/
+AT0000A0SE25 : https://doc.morningstar.com/Document/1eacc012b8ad869327f0286342927d12.msdoc/
+AT0000A1TB59 : https://doc.morningstar.com/Document/e9017166cc99c0c0f80e45d8594f3b73.msdoc/
+BE0057451271 : https://doc.morningstar.com/Document/8a2d4b9507d523cd27f59051967a5ed4.msdoc/
+BE0058182792 : https://doc.morningstar.com/Document/193523895a3184e0b7712b33ca6bc634.msdoc/
+AT0000A0SE25 : https://doc.morningstar.com/Document/1eacc012b8ad869327f0286342927d12.msdoc/
+AT0000A1TB59 : https://doc.morningstar.com/Document/e9017166cc99c0c0f80e45d8594f3b73.msdoc/
+BE0057451271 : https://doc.morningstar.com/Document/8a2d4b9507d523cd27f59051967a5ed4.msdoc/
+BE0058182792 : https://doc.morningstar.com/Document/193523895a3184e0b7712b33ca6bc634.msdoc/
+AT0000A0SE25 : https://doc.morningstar.com/Document/1eacc012b8ad869327f0286342927d12.msdoc/
+AT0000A1TB59 : https://doc.morningstar.com/Document/e9017166cc99c0c0f80e45d8594f3b73.msdoc/
+BE0057451271 : https://doc.morningstar.com/Document/8a2d4b9507d523cd27f59051967a5ed4.msdoc/
+BE0058182792 : https://doc.morningstar.com/Document/193523895a3184e0b7712b33ca6bc634.msdoc/
+AT0000A0SE25 : https://doc.morningstar.com/Document/1eacc012b8ad869327f0286342927d12.msdoc/
+AT0000A1TB59 : https://doc.morningstar.com/Document/e9017166cc99c0c0f80e45d8594f3b73.msdoc/
+BE0057451271 : https://doc.morningstar.com/Document/8a2d4b9507d523cd27f59051967a5ed4.msdoc/
+BE0058182792 : https://doc.morningstar.com/Document/193523895a3184e0b7712b33ca6bc634.msdoc/
+AT0000A0SE25 : https://doc.morningstar.com/Document/1eacc012b8ad869327f0286342927d12.msdoc/
+AT0000A1TB59 : https://doc.morningstar.com/Document/e9017166cc99c0c0f80e45d8594f3b73.msdoc/
+BE0057451271 : https://doc.morningstar.com/Document/8a2d4b9507d523cd27f59051967a5ed4.msdoc/
+BE0058182792 : https://doc.morningstar.com/Document/193523895a3184e0b7712b33ca6bc634.msdoc/
+AT0000A0SE25 : https://doc.morningstar.com/Document/1eacc012b8ad869327f0286342927d12.msdoc/
+AT0000A1TB59 : https://doc.morningstar.com/Document/e9017166cc99c0c0f80e45d8594f3b73.msdoc/
+BE0057451271 : https://doc.morningstar.com/Document/8a2d4b9507d523cd27f59051967a5ed4.msdoc/
+BE0058182792 : https://doc.morningstar.com/Document/193523895a3184e0b7712b33ca6bc634.msdoc/
