@@ -20,6 +20,7 @@ import os
 
 from tqdm import tqdm
 import requests
+from selenium.webdriver.chrome.options import Options
 
 
 def requirements(dic_file, progress, drive):
@@ -53,7 +54,12 @@ def requirements(dic_file, progress, drive):
 
 def login(mail):
     
-    driver = webdriver.Chrome()
+    chrome_options = Options()
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--ignore-certificate-errors')
+    chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--disable-dev-shm-usage')
+    driver = webdriver.Chrome(executable_path='/driver/chromedriver', options=chrome_options)
     url = "https://doc.morningstar.com/Fund.aspx?u=ALL#"
     driver.get(url)
     
