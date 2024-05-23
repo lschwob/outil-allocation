@@ -15,7 +15,7 @@
 secrets.ini
 .streamlit/
 data/morningstar/*
-data/other/*
+data/other/*.pdf
 test.pdf
 # Ignore package files
 *.egg-info/
