@@ -176,7 +176,7 @@ def scrap(mail, dic_file, progress, drive):
         
         if len(tr_elements) > 0:
             for tr in tr_elements:
-                if (("KID" in tr.text) or ("PRIIP" in tr.text)) and ("Français" in tr.text):
+                if (("KID" in tr.text) or ("PRIIP" in tr.text) or ("KIID" in tr.text)) and ("Fr" in tr.text):
                     st.code(tr.text)
                     # print(tr.find_element(By.XPATH, 'td[5]/a[2]').get_attribute("href"))
                     link = tr.find_element(By.XPATH, 'td[5]/a[2]').get_attribute("href")
