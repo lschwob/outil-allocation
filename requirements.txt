@@ -1,9 +1,7 @@
 numpy
 pandas
-selenium
 tqdm
 requests
-streamlit
 st-gsheets-connection
 bs4
 streamlit_modal
@@ -13,4 +11,6 @@ google-auth-oauthlib
 pydrive
 st-files-connection
 gcsfs
+streamlit
+seleniumbase
 webdriver-manager

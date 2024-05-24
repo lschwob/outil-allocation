@@ -39,6 +39,7 @@ def scrap_app(mail, dic_file, progress, confirm_message, drive):
     
     driver, dic_cat = scrap(mail, dic_file, progress, drive)
     st.session_state.driver = driver
+    st.code(driver.page_source)
     st.session_state.dic_cat = dic_cat
     return driver, dic_cat
 
