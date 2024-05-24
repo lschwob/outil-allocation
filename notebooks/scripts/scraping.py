@@ -172,15 +172,15 @@ def scrap(mail, dic_file, progress, drive):
         
         tr_elements = driver.find_elements(By.XPATH, '/html/body/div[10]/div[3]/div[3]/table/tbody[2]/tr')
         
-        st.code(len(tr_elements))
+        # st.code(len(tr_elements))
         
         if len(tr_elements) > 0:
             for tr in tr_elements:
                 if (("KID" in tr.text) or ("PRIIP" in tr.text)) and ("Fr" in tr.text):
-                    st.code(tr.text)
+                    # st.code(tr.text)
                     # print(tr.find_element(By.XPATH, 'td[5]/a[2]').get_attribute("href"))
                     link = tr.find_element(By.XPATH, 'td[5]/a[2]').get_attribute("href")
-                    st.code(link)
+                    # st.code(link)
                     # response = requests.get(link)
                     # if response.status_code == 200:
                     #     with open(f"../data/other/{isin}.pdf", 'wb') as f:
