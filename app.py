@@ -77,7 +77,7 @@ if __name__ == "__main__":
     if st.session_state.show_isin:    
         df = conn.read(
             worksheet="Liste des fonds",
-            ttl="2m"
+            ttl="1m"
             # usecols=[0, 2, 3, 4],
             # skiprows = skip_rows
         )
