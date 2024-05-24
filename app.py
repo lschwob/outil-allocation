@@ -88,7 +88,7 @@ if __name__ == "__main__":
         df.dropna(subset=[df.columns[0]], inplace=True)
         df['Date'] = df['Date'].astype(str)
 
-        df_toscrap = df[(~df['Date'].str.contains(str(year))) & (df['Disponibilité'] == False)]
+        df_toscrap = df[(~df['Date'].str.contains(str(year))) & ((df['Disponibilité'] == False) | (df['Disponibilité'].isnull()))]
         
 
         isins = list(df_toscrap.iloc[:, 0])
