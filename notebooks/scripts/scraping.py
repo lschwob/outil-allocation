@@ -65,6 +65,8 @@ def login(mail):
     # options.add_argument("--window-size=700x865")
     # options.add_argument("--disable-features=VizDisplayCompositor")
     # options.add_argument('--ignore-certificate-errors')
+    # proxy_server_url = "51.210.182.12"
+    # options.add_argument(f'--proxy-server={proxy_server_url}')
     driver = webdriver.Chrome(options=options)
     url = "https://doc.morningstar.com/Fund.aspx?u=ALL#"
     driver.get(url)
@@ -170,14 +172,14 @@ def scrap(mail, dic_file, progress, drive):
         
         tr_elements = driver.find_elements(By.XPATH, '/html/body/div[10]/div[3]/div[3]/table/tbody[2]/tr')
         
-        st.code(tr_elements)
+        # st.code(tr_elements)
                 
         if len(tr_elements) > 0:
             for tr in tr_elements:
                 if (("KID" in tr.text) or ("PRIIP" in tr.text)) and ("Français" in tr.text):
                     # print(tr.find_element(By.XPATH, 'td[5]/a[2]').get_attribute("href"))
                     link = tr.find_element(By.XPATH, 'td[5]/a[2]').get_attribute("href")
-                    print(link)
+                    st.code(link)
                     # response = requests.get(link)
                     # if response.status_code == 200:
                     #     with open(f"../data/other/{isin}.pdf", 'wb') as f:
