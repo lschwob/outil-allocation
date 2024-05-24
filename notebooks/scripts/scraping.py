@@ -12,17 +12,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.alert import Alert
 
-
-from selenium import webdriver
-from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.common.by import By
-from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.firefox.service import Service
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait
-from webdriver_manager.firefox import GeckoDriverManager
-
-
 from .drive import get_files, update_file, get_file, create_file
 
 
@@ -65,13 +54,16 @@ def requirements(dic_file, progress, drive):
 
 def login(mail):
     
-    firefoxOptions = Options()
-    firefoxOptions.add_argument("--headless")
-    service = Service(GeckoDriverManager().install())
-    driver = webdriver.Firefox(
-        options=firefoxOptions,
-        service=service,
-    )
+    options = Options()
+    options.add_argument("--headless=new")
+    # options.add_argument("--no-sandbox")
+    # options.add_argument("--disable-dev-shm-usage")
+    # options.add_argument("--disable-gpu")
+    # options.add_argument("--disable-features=NetworkService")
+    # options.add_argument("--window-size=700x865")
+    # options.add_argument("--disable-features=VizDisplayCompositor")
+    # options.add_argument('--ignore-certificate-errors')
+    driver = webdriver.Chrome(options=options)
     url = "https://doc.morningstar.com/Fund.aspx?u=ALL#"
     driver.get(url)
     
@@ -79,6 +71,10 @@ def login(mail):
     
     login = driver.find_element(By.XPATH, '/html/body/div[10]/div[3]/div[1]/div[2]/div/div/form/input')
     login.click()
+    
+    print("_____________________________")
+    print("Logging in...")
+    print("_____________________________")
     
     mail_input = driver.find_element(By.XPATH, '/html/body/div/ctrsi-signin-component/div/div/div[2]/main/section/div/div[2]/div/div/form/label[1]/input')
     mail_input.send_keys(mail)
