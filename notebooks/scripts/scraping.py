@@ -3,13 +3,13 @@ import numpy as np
 import json
 import bs4
 
+import streamlit as st
+
 import selenium
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.alert import Alert
@@ -57,11 +57,18 @@ def requirements(dic_file, progress, drive):
 def login(mail):
     
     options = Options()
-    options.add_argument('--disable-gpu')
-    options.add_argument('--headless')
+    options.add_argument("--headless=new")
+    # options.add_argument("--no-sandbox")
+    # options.add_argument("--disable-dev-shm-usage")
+    # options.add_argument("--disable-gpu")
+    # options.add_argument("--disable-features=NetworkService")
+    # options.add_argument("--window-size=700x865")
+    # options.add_argument("--disable-features=VizDisplayCompositor")
+    # options.add_argument('--ignore-certificate-errors')
     driver = webdriver.Chrome(options=options)
     url = "https://doc.morningstar.com/Fund.aspx?u=ALL#"
     driver.get(url)
+    
     Alert(driver).accept()
     
     login = driver.find_element(By.XPATH, '/html/body/div[10]/div[3]/div[1]/div[2]/div/div/form/input')
@@ -162,6 +169,8 @@ def scrap(mail, dic_file, progress, drive):
     
         
         tr_elements = driver.find_elements(By.XPATH, '/html/body/div[10]/div[3]/div[3]/table/tbody[2]/tr')
+        
+        st.code(tr_elements)
                 
         if len(tr_elements) > 0:
             for tr in tr_elements:
