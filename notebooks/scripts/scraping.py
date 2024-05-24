@@ -59,7 +59,7 @@ def login(mail):
     options = Options()
     options.add_argument('--disable-gpu')
     options.add_argument('--headless')
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+    driver = webdriver.Chrome(options=options)
     url = "https://doc.morningstar.com/Fund.aspx?u=ALL#"
     driver.get(url)
     Alert(driver).accept()
