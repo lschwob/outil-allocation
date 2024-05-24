@@ -3,7 +3,7 @@ from streamlit_gsheets import GSheetsConnection
 import os
 import pandas as pd
 from notebooks.scripts.scraping import requirements, login, download_classic, download_from_progress, scrap, check_availability
-from notebooks.scripts.drive import check_drive_availability, get_files, update_file, create_file, get_file
+from notebooks.scripts.drive import get_files, update_file, create_file, get_file
 import gspread 
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
@@ -39,7 +39,7 @@ def scrap_app(mail, dic_file, progress, confirm_message, drive):
     
     driver, dic_cat = scrap(mail, dic_file, progress, drive)
     st.session_state.driver = driver
-    st.code(driver.page_source)
+    # st.code(driver.page_source)
     st.session_state.dic_cat = dic_cat
     return driver, dic_cat
 
