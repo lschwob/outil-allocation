@@ -153,7 +153,7 @@ def scrap(mail, dic_file, progress, drive):
     
     driver = login(mail)
         
-    for row in tqdm(dic_cat.iterrows(), total=dic_cat.shape[0], desc="Scraping..."):
+    for row in dic_cat.iterrows():
         
         # print(f"Scraping {row[1]['CODE ISIN']}")
         
