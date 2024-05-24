@@ -1,5 +1,2 @@
 chromium
 chromium-driver
-chrome
-geckodriver
-chromedriver
