@@ -118,3 +118,15 @@ BE0057451271 : https://doc.morningstar.com/Document/8a2d4b9507d523cd27f59051967a
 BE0058182792 : https://doc.morningstar.com/Document/193523895a3184e0b7712b33ca6bc634.msdoc/
 BE0058185829 : https://doc.morningstar.com/Document/c5367180dd47470016b9963dc8dcc01c.msdoc/
 BE0058187841 : https://doc.morningstar.com/Document/16f5a67a51dfd824c68d8b3470f0d7a8.msdoc/
+AT0000A0SE25 : https://doc.morningstar.com/Document/1eacc012b8ad869327f0286342927d12.msdoc/
+AT0000A1TB59 : https://doc.morningstar.com/Document/e9017166cc99c0c0f80e45d8594f3b73.msdoc/
+BE0057451271 : https://doc.morningstar.com/Document/8a2d4b9507d523cd27f59051967a5ed4.msdoc/
+BE0058182792 : https://doc.morningstar.com/Document/193523895a3184e0b7712b33ca6bc634.msdoc/
+BE0058185829 : https://doc.morningstar.com/Document/c5367180dd47470016b9963dc8dcc01c.msdoc/
+BE0058187841 : https://doc.morningstar.com/Document/16f5a67a51dfd824c68d8b3470f0d7a8.msdoc/
+AT0000A0SE25 : https://doc.morningstar.com/Document/1eacc012b8ad869327f0286342927d12.msdoc/
+AT0000A1TB59 : https://doc.morningstar.com/Document/e9017166cc99c0c0f80e45d8594f3b73.msdoc/
+BE0057451271 : https://doc.morningstar.com/Document/8a2d4b9507d523cd27f59051967a5ed4.msdoc/
+BE0058182792 : https://doc.morningstar.com/Document/193523895a3184e0b7712b33ca6bc634.msdoc/
+BE0058185829 : https://doc.morningstar.com/Document/c5367180dd47470016b9963dc8dcc01c.msdoc/
+BE0058187841 : https://doc.morningstar.com/Document/16f5a67a51dfd824c68d8b3470f0d7a8.msdoc/
