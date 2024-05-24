@@ -13,3 +13,4 @@ google-auth-oauthlib
 pydrive
 st-files-connection
 gcsfs
+webdriver-manager
