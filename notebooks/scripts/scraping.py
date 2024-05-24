@@ -203,7 +203,7 @@ def scrap(mail, dic_file, progress, drive):
 
 def scrap_geco(dic_cat, progress, drive):    
         
-    for row in tqdm(dic_cat.iterrows(), total=dic_cat.shape[0], desc='Scraping AMF GeCo'):
+    for row in dic_cat.iterrows():
         if dic_cat.loc[row[0], "Morningstar"] == "Not Found":
             code_isin = row[1]['CODE ISIN']
             url = f'https://geco.amf-france.org/Bio/res_doc.aspx?NomProd=&NomSOc=&varvalidform=on&action=new&TypeDoc=Notice&TYPEPROD=0&NumAgr=&CodePart={code_isin}&DateDebAgr=&DateFinAgr=&DateDeb=&DateFin=&valid_form=Lancer+la+recherche'
