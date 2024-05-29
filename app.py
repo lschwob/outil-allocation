@@ -12,6 +12,7 @@ from googleapiclient.http import MediaFileUpload
 import io
 from googleapiclient.errors import HttpError
 import json
+import time
     
 
 def main():
@@ -131,6 +132,8 @@ if __name__ == "__main__":
             with st.form(key='my_form'):
                 confirm_message = st.text_input('Ecrivez "Confirmer" pour lancer le scraping')
                 st.error('En confirmant toutes les fiches ne datant pas de l\'année indiquée seront écrasées', icon="⚠️")
+                print(time.time())
+                heure_lancement = time.time()
                 st.form_submit_button('Scraper les fiches manquantes', on_click=scrap_app, args=('piron85023@lucvu.com', df_toscrap, 'new_progress.txt', confirm_message, drive))
                 st.info('Cette action peut prendre du temps...', icon="ℹ️")
                 # st.warning('Si vous n\'observez pas de changement dans les fiches manquantes après exécution du scraping cela signifie que les fiches ne sont pas disponibles sur Morningstar (ni sur GeCo de l\'AMF).', icon="⚠️")
@@ -156,3 +159,6 @@ if __name__ == "__main__":
                     
                     st.write('Fiches manquantes après scraping :')
                     st.write(not_available)
+                    heure_fin = time.time()
+                    print(time.time())
+                    print(f'Temps d\'exécution : {heure_fin - heure_lancement}')
