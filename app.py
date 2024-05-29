@@ -13,6 +13,7 @@ import io
 from googleapiclient.errors import HttpError
 import json
 import time
+import datetime
     
 
 def main():
@@ -132,9 +133,9 @@ if __name__ == "__main__":
             with st.form(key='my_form'):
                 confirm_message = st.text_input('Ecrivez "Confirmer" pour lancer le scraping')
                 st.error('En confirmant toutes les fiches ne datant pas de l\'année indiquée seront écrasées', icon="⚠️")
-                heure_lancement = pd.to_datetime('today').minute
+                start_timer = datetime.datetime.now()
                 print("_"*100)
-                print(heure_lancement)
+                print(start_timer)
                 print("_"*100)
                 st.form_submit_button('Scraper les fiches manquantes', on_click=scrap_app, args=('piron85023@lucvu.com', df_toscrap, 'new_progress.txt', confirm_message, drive))
                 st.info('Cette action peut prendre du temps...', icon="ℹ️")
@@ -161,8 +162,18 @@ if __name__ == "__main__":
                     st.success('Scraping terminé')
                     # st.write('Fiches manquantes après scraping :')
                     # st.write(not_available)
-                    heure_fin = pd.to_datetime('today').minute
+                    end_timer = datetime.datetime.now()                    
                     print("_"*100)
-                    print(heure_fin)
+                    print(end_timer)
                     print("_"*100)
-                    print(f'Temps d\'exécution : {heure_fin - heure_lancement}')
+                    elapsed_time = end_timer - start_timer
+
+                    # Afficher le temps écoulé en heures, minutes et secondes
+                    hours = elapsed_time.seconds // 3600
+                    minutes = (elapsed_time.seconds % 3600) // 60
+                    seconds = elapsed_time.seconds % 60
+
+                    # Formatage du temps écoulé
+                    elapsed_time_str = f"{hours:02}:{minutes:02}:{seconds:02}"
+
+                    print(f"Temps écoulé : {elapsed_time_str}")
