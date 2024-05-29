@@ -57,7 +57,7 @@ if __name__ == "__main__":
     
     st.sidebar.header('Paramètres de l\'outil')
     col = st.sidebar.number_input('Numéro de la colonne à rechercher', value=0)
-    skip_rows = st.sidebar.number_input('Première ligne à lire', value=8) - 1
+    skip_rows = st.sidebar.number_input('Première ligne à lire', value=4) - 1
     year = st.sidebar.number_input('Année', value=2024, step=1)
     
    
@@ -77,7 +77,7 @@ if __name__ == "__main__":
         
     if st.session_state.show_isin:    
         df = conn.read(
-            worksheet="Liste des fonds",
+            worksheet="ISIN_DIC_URL",
             ttl="1m"
             # usecols=[0, 2, 3, 4],
             # skiprows = skip_rows
@@ -147,7 +147,7 @@ if __name__ == "__main__":
                     
                     print(sheet_df)
                     df = conn.update(
-                        worksheet="Liste des fonds",
+                        worksheet="ISIN_DIC_URL",
                         data=sheet_df
                     )
                     

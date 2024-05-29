@@ -21,3 +21,4 @@ test.pdf
 *.egg-info/
 dist/
 build/
+test1.ipynb
