@@ -171,40 +171,40 @@ def scrap(mail, dic_file, progress, drive):
         
         file = get_file(drive, isin)
         
-    
+        if file != None:
         
-        tr_elements = driver.find_elements(By.XPATH, '/html/body/div[10]/div[3]/div[3]/table/tbody[2]/tr')
-        
-        # st.code(len(tr_elements))
-        
-        if len(tr_elements) > 0:
-            for tr in tr_elements:
-                if (("KID" in tr.text) or ("PRIIP" in tr.text)) and ("Fr" in tr.text):
-                    # st.code(tr.text)
-                    # print(tr.find_element(By.XPATH, 'td[5]/a[2]').get_attribute("href"))
-                    link = tr.find_element(By.XPATH, 'td[5]/a[2]').get_attribute("href")
-                    # st.code(link)
-                    # response = requests.get(link)
-                    # if response.status_code == 200:
-                    #     with open(f"../data/other/{isin}.pdf", 'wb') as f:
-                    #         f.write(response.content)
-                    dic_cat.loc[row[0], "Morningstar"] = link
-                    #Year
-                    dic_cat.loc[row[0], "Disponibilité"] = True
-                    download_classic(driver, link, isin, drive, file)
-                    os.remove(f"./data/other/{isin}.pdf")    
-                    file = get_file(drive, isin)
-                    try :
-                        dic_cat.loc[row[0], "URL"] = f"https://drive.google.com/file/d/{file.get('files')[0].get('id')}/view?usp=sharing"
-                    except :
-                        print("Error")
-                    break
-                # else:
-                    # dic_cat.loc[row[0], "Morningstar"] = "Not Found"
-        dic_cat.loc[row[0], "Date"] = pd.to_datetime('today').year
-        
-        with open(progress, 'a') as f :
-            f.write(f"{row[1]['CODE ISIN']} : {dic_cat.loc[row[0], 'Morningstar']}\n")
+            tr_elements = driver.find_elements(By.XPATH, '/html/body/div[10]/div[3]/div[3]/table/tbody[2]/tr')
+            
+            # st.code(len(tr_elements))
+            
+            if len(tr_elements) > 0:
+                for tr in tr_elements:
+                    if (("KID" in tr.text) or ("PRIIP" in tr.text)) and ("Fr" in tr.text):
+                        # st.code(tr.text)
+                        # print(tr.find_element(By.XPATH, 'td[5]/a[2]').get_attribute("href"))
+                        link = tr.find_element(By.XPATH, 'td[5]/a[2]').get_attribute("href")
+                        # st.code(link)
+                        # response = requests.get(link)
+                        # if response.status_code == 200:
+                        #     with open(f"../data/other/{isin}.pdf", 'wb') as f:
+                        #         f.write(response.content)
+                        dic_cat.loc[row[0], "Morningstar"] = link
+                        #Year
+                        dic_cat.loc[row[0], "Disponibilité"] = True
+                        download_classic(driver, link, isin, drive, file)
+                        os.remove(f"./data/other/{isin}.pdf")    
+                        file = get_file(drive, isin)
+                        try :
+                            dic_cat.loc[row[0], "URL"] = f"https://drive.google.com/file/d/{file.get('files')[0].get('id')}/view?usp=sharing"
+                        except :
+                            print("Error")
+                        break
+                    # else:
+                        # dic_cat.loc[row[0], "Morningstar"] = "Not Found"
+            dic_cat.loc[row[0], "Date"] = pd.to_datetime('today').year
+            
+            with open(progress, 'a') as f :
+                f.write(f"{row[1]['CODE ISIN']} : {dic_cat.loc[row[0], 'Morningstar']}\n")
             
     if len(dic_cat[dic_cat["Morningstar"] == "Not Found"]) > 0:
         dic_cat = scrap_geco(dic_cat, progress, drive)
