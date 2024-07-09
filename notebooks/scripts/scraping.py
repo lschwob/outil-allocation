@@ -119,7 +119,7 @@ def download_classic(driver, link, isin, drive, file):
         
         
 def download_from_progress(progress):
-    driver = login("piron85023@lucvu.com")
+    driver = login("dixif61320@atebin.com")
     
     downloaded = os.listdir('../data/morningstar')
     
