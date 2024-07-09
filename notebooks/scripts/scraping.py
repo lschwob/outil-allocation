@@ -165,13 +165,15 @@ def scrap(mail, dic_file, progress, drive):
         # print(f"Scraping {row[1]['CODE ISIN']}")
         
         isin = row[1]["CODE ISIN"]
-        input = driver.find_element(By.XPATH, '//*[@id="SearchInput"]')
-        input.clear()    
-        input.send_keys(isin + Keys.RETURN)
         
         file = get_file(drive, isin)
         
         if file == None:
+            input = driver.find_element(By.XPATH, '//*[@id="SearchInput"]')
+            input.clear()    
+            input.send_keys(isin + Keys.RETURN)
+        
+        
         
             tr_elements = driver.find_elements(By.XPATH, '/html/body/div[10]/div[3]/div[3]/table/tbody[2]/tr')
             
