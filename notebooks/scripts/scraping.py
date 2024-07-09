@@ -205,6 +205,10 @@ def scrap(mail, dic_file, progress, drive):
             
             with open(progress, 'a') as f :
                 f.write(f"{row[1]['CODE ISIN']} : {dic_cat.loc[row[0], 'Morningstar']}\n")
+        else:
+            dic_cat.loc[row[0], "URL"] = f"https://drive.google.com/file/d/{file.get('files')[0].get('id')}/view?usp=sharing"
+            dic_cat.loc[row[0], "Morningstar"] = " "
+            dic_cat.loc[row[0], "Disponibilité"] = True
             
     if len(dic_cat[dic_cat["Morningstar"] == "Not Found"]) > 0:
         dic_cat = scrap_geco(dic_cat, progress, drive)
