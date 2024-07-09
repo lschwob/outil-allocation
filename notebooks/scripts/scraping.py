@@ -80,6 +80,8 @@ def login(mail):
     print("Logging in...")
     print("_____________________________")
     
+    print(mail)
+    
     mail_input = driver.find_element(By.XPATH, '/html/body/div/ctrsi-signin-component/div/div/div[2]/main/section/div/div[2]/div/div/form/label[1]/input')
     mail_input.send_keys(mail)
     
