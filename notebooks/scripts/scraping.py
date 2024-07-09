@@ -171,7 +171,7 @@ def scrap(mail, dic_file, progress, drive):
         
         file = get_file(drive, isin)
         
-        if file != None:
+        if file == None:
         
             tr_elements = driver.find_elements(By.XPATH, '/html/body/div[10]/div[3]/div[3]/table/tbody[2]/tr')
             
