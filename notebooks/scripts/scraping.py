@@ -24,6 +24,7 @@ from tqdm import tqdm
 import requests
 from selenium.webdriver.chrome.options import Options
 
+pd.options.mode.copy_on_write = True
 
 def requirements(dic_file, progress, drive):
     if not os.path.exists('../data/morningstar'):
