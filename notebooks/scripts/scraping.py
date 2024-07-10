@@ -95,6 +95,7 @@ def login(mail):
     nav.click()
     
     driver.get('https://doc.morningstar.com/Fund.aspx?u=ALL')
+    print("driver ready")
     return driver
 
 def download_classic(driver, link, isin, drive, file):
@@ -168,6 +169,9 @@ def scrap(mail, dic_file, progress, drive):
         
         file = get_file(drive, isin)
         
+        print(f"Scraping {isin}")
+        print(file)
+        
         if file == None:
             input = driver.find_element(By.XPATH, '//*[@id="SearchInput"]')
             input.clear()    
@@ -208,6 +212,7 @@ def scrap(mail, dic_file, progress, drive):
             with open(progress, 'a') as f :
                 f.write(f"{row[1]['CODE ISIN']} : {dic_cat.loc[row[0], 'Morningstar']}\n")
         else:
+            dic_cat.loc[row[0], "Date"] = pd.to_datetime('today').year
             dic_cat.loc[row[0], "URL"] = f"https://drive.google.com/file/d/{file.get('files')[0].get('id')}/view?usp=sharing"
             dic_cat.loc[row[0], "Morningstar"] = " "
             dic_cat.loc[row[0], "Disponibilité"] = True
