@@ -153,10 +153,9 @@ def download_from_progress(progress):
                         f.write(response.content)
     return driver
 
-def scrap(mail, dic_file, progress, drive):
+def scrap(mail, dic_file, progress, drive, dic_cat):
     
     
-    dic_cat = requirements(dic_file, progress, drive)
     
     # return
     
@@ -295,6 +294,17 @@ def scrap_geco(dic_cat, progress, drive):
                         f.write(f'{code_isin} : No pdf\n')
 
     return dic_cat
+    
+
+def scrap_many(mail, dic_file, progress, drive):
+    dic_cat = requirements(dic_file, progress, drive)
+    final_df = pd.DataFrame(columns = dic_cat.columns)
+    slices = [dic_cat[i:i+100] for i in range(0, len(dic_cat), 100)]
+    for slice in slices:
+        driver, dic_cat = scrap(mail, dic_file, progress, drive, slice)
+        final_df = pd.concat([final_df, dic_cat])
+    
+    return driver, final_df
     
 
 def check_availability(isin):
